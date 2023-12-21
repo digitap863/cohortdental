@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Cohort - Dental">
+  <link href="assets/images/favicon/fav.png" rel="icon">
+  <title>Cohort Dental</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Montserrat:wght@400;700&display=swap"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <link rel="stylesheet" href="assets/css/libraries.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading"><span></span><span></span><span></span><span></span></div>
+    </div><!-- /.preloader -->
+
+    <!-- =========================
+        Header
+    =========================== -->
+    
+    
+    <header class="header header-layout1">
+      <div class="header-topbar">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="d-flex align-items-center justify-content-between">
+                <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
+                  <li>
+                    <button class="miniPopup-emergency-trigger" type="button">Call Us</button>
+                    <div id="miniPopup-emergency" class="miniPopup miniPopup-emergency text-center">
+                      <div class="emergency__icon">
+                        <i class="icon-call3"></i>
+                      </div>
+                      <a href="tel:8714563997" class="phone__number">
+                        <i class="icon-phone"></i> <span>8714563997</span>
+                      </a>
+                      <p>Please feel free to contact our friendly reception staff with any dental or medical enquiry.
+                      </p>
+                      <a href="appointment.html" class="btn btn__secondary btn__link btn__block">
+                        <span>Make Appointment</span> <i class="icon-arrow-right"></i>
+                      </a>
+                    </div><!-- /.miniPopup-emergency -->
+                  </li>
+                  <!-- <li>
+                    <i class="icon-phone"></i><a href="tel:+5565454117">Emergency Line: (002) 01061245741</a>
+                  </li> -->
+                  <li>
+                    <i class="icon-location"></i><a href="#">Location: Karaparamba, Calicut, Kerala</a>
+                  </li>
+                  <li>
+                    <i class="icon-clock"></i><a href="contact-us.html">Mon - Sat: 9:30 am - 7:00 pm</a>
+                  </li>
+                </ul><!-- /.contact__list -->
+                <div class="d-flex">
+                  <ul class="social-icons list-unstyled mb-0 mr-30">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul>
+
+                  <!-- <form class="header-topbar__search">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="header-topbar__search-btn"><i class="fa fa-search"></i></button>
+                  </form> -->
+                </div>
+              </div>
+            </div><!-- /.col-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.header-top -->
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <!-- <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo"> -->
+            <img src="assets/images/logo/logo-cohort.png" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav__item">
+              
+                    <a href="index.html" class="active nav__item-link">Home</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="about-us.html" class="nav__item-link">About Us</a>
+              </li>
+              <li class="nav__item">
+                <a href="gallery.html" class="nav__item-link">Gallery</a>
+              </li>
+
+              <li class="nav__item has-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Services</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="services-single.html" class="nav__item-link">Dental Services</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="services-yoga.html" class="nav__item-link">Yogayanam</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="services-weight.html" class="nav__item-link">Weight Management</a>
+                  </li><!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="services-other.html" class="nav__item-link">Other Services</a>
+                  </li><!-- /.nav-item -->
+                  <!-- <li class="nav__item">
+                    <a href="services-single.html" class="nav__item-link">Appointments</a>
+                  </li> -->
+                 
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+
+              <li class="nav__item">
+                <a href="blog.html" class="nav__item-link">Blogs</a>
+              </li>
+              <li class="nav__item">
+                <a href="doctors-modern.html" class="nav__item-link">Team Cohort</a>
+              </li>
+              <li class="nav__item">
+                <a href="contact-us.html" class="nav__item-link">Contacts</a>
+              </li><!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+
+            <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+           
+            <a href="appointment.html" class="btn btn__primary btn__rounded ml-30">
+              <i class="icon-calendar"></i>
+              <span>Appointment</span>
+            </a>
+          </div>
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header>
+    
+    <!-- /.Header -->
+
+    <!-- ============================
+        Slider
+    ============================== -->
+    <section class="slider">
+      <div class="slick-carousel m-slides-0"
+        data-slick='{"slidesToShow": 1, "arrows": true, "dots": false, "speed": 700,"fade": true,"cssEase": "linear"}'>
+        <div class="slide-item align-v-h">
+          <div class="bg-img"><img src="assets/images/sliders/banner-dental.webp" alt="slide img"></div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <h2 class="slide__title">COHORT HEALTHCARE</h2>
+                  <!-- <p class="slide__desc">The health and well-being of our patients and their health care team will
+                    always be our priority, so we follow the best practices for cleanliness.</p> -->
+                  <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
+                    
+                    <li class="feature-item">
+                      <div class="feature__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dental-broken" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M12 5.5c-1.074 -.586 -2.583 -1.5 -4 -1.5c-2.1 0 -4 1.247 -4 5c0 4.899 1.056 8.41 2.671 10.537c.573 .756 1.97 .521 2.567 -.236c.398 -.505 .819 -1.439 1.262 -2.801c.292 -.771 .892 -1.504 1.5 -1.5c.602 0 1.21 .737 1.5 1.5c.443 1.362 .864 2.295 1.262 2.8c.597 .759 2 .993 2.567 .237c1.615 -2.127 2.671 -5.637 2.671 -10.537c0 -3.74 -1.908 -5 -4 -5c-1.423 0 -2.92 .911 -4 1.5z"></path>
+                      <path d="M12 5.5l1 2.5l-2 2l2 2"></path>
+                      </svg>
+                      </div>
+                      <h2 class="feature__title">Dental Care</h2>
+                    </li>
+
+                    <li class="feature-item">
+                      <div class="feature__icon">
+                      <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-yoga" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                        <path d="M4 20h4l1.5 -3"></path>
+                        <path d="M17 20l-1 -5h-5l1 -7"></path>
+                        <path d="M4 10l4 -1l4 -1l4 1.5l4 1.5"></path>
+                      </svg> -->
+                      <img src="assets/images/icons//Group_104-removebg-preview.png" width="60px">
+                      </div>
+                      <h2 class="feature__title">Yogayanam </h2>
+                    </li>
+
+                    <li class="feature-item">
+                      <div class="feature__icon">
+                        <img src="assets/images/icons/weight-scale (1).png" width="40px">
+                      </div>
+                      <h2 class="feature__title" style="text-align:left;">Ayur Fyt<br>Weight Management</h2>
+                    </li>
+
+                    <!-- <li class="feature-item">
+                      <div class="feature__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zodiac-cancer" width="44" height="44" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                        <path d="M18 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                        <path d="M3 12a10 6.5 0 0 1 14 -6.5"></path>
+                        <path d="M21 12a10 6.5 0 0 1 -14 6.5"></path>
+                      </svg>
+                      </div>
+                      <h2 class="feature__title">Cancer Diagnosis</h2>
+                    </li> -->
+
+
+                  </ul>
+                  
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+        <div class="slide-item align-v-h">
+          <div class="bg-img"><img src="assets/images/sliders/banner-dental-2.webp" alt="slide img"></div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <h2 class="slide__title">Trusted care for your dental and health needs</h2>
+                  <!-- <p class="slide__desc">The health and well-being of our patients and their health care team will
+                    always be our priority, so we follow the best practices for cleanliness.</p> -->
+                  <ul class="features-list list-unstyled mb-0 d-flex flex-wrap">
+                   
+                    <li class="feature-item">
+                      <div class="feature__icon">
+                      <img src="assets/images/icons/mother-with-baby.svg" width="44px">
+                      </div>
+                      <h2 class="feature__title">Maternity Care</h2>
+                    </li>
+                    
+                    <li class="feature-item">
+                      <div class="feature__icon">
+                        <img src="assets/images/icons/old-man (2).png" alt="icon" width="38px">
+                      </div>
+                      <h2 class="feature__title">Geriatric Care</h2>
+                    </li><!-- /.feature-item-->
+                   
+                    <li class="feature-item">
+                      <div class="feature__icon">
+                      <i class="icon-heart2"></i>
+                      </div>
+                      <h2 class="feature__title">Lifestyle Care</h2>
+                    </li>
+
+
+
+                  </ul><!-- /.features-list -->
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+      </div><!-- /.carousel -->
+    </section><!-- /.slider -->
+
+    <!-- ============================
+        contact info
+    ============================== -->
+    <section class="contact-info py-0">
+      <div class="container">
+        <div class="row row-no-gutter boxes-wrapper">
+          <div class="col-sm-12 col-md-4">
+            <div class="contact-box d-flex">
+              <div class="contact__icon">
+                <i class="icon-call3"></i>
+              </div><!-- /.contact__icon -->
+              <div class="contact__content">
+                <h2 class="contact__title">Request A Call</h2>
+                <p class="contact__desc">Please feel free to contact our friendly reception staff with any dental or
+                  medical enquiry.</p>
+                <a href="tel:+91 8714563997" class="phone__number">
+                  <i class="icon-phone"></i> <span>+91 8714563997</span>
+                </a>
+              </div><!-- /.contact__content -->
+            </div><!-- /.contact-box -->
+          </div><!-- /.col-md-4 -->
+          <div class="col-sm-12 col-md-4">
+            <div class="contact-box d-flex">
+              <div class="contact__icon">
+                <i class="icon-health-report"></i>
+              </div><!-- /.contact__icon -->
+              <div class="contact__content">
+                <h2 class="contact__title">Find a Doctor</h2>
+                <p class="contact__desc">Schedule an appointment or an in-person consultation with one of our doctors .</p>
+                <a href="appointment.html" class="btn btn__white btn__outlined btn__rounded">
+                  <span>Book Appointment</span><i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.contact__content -->
+            </div><!-- /.contact-box -->
+          </div><!-- /.col-md-4 -->
+          <div class="col-sm-12 col-md-4">
+            <div class="contact-box d-flex">
+              <div class="contact__icon">
+                <i class="icon-heart2"></i>
+              </div><!-- /.contact__icon -->
+              <div class="contact__content">
+                <h2 class="contact__title">Opening Hours</h2>
+                <ul class="time__list list-unstyled mb-0">
+                  <li><span>Mond - Sat :</span><span>&nbsp;9.30 am - 7:00 pm</span></li>
+                  <!-- <li><span>Saturday</span><span>9.00 - 10:00 pm</span></li> -->
+                  <li><span>Sunday -&nbsp;</span><span>Based On Appointments</span></li>
+                </ul>
+              </div><!-- /.contact__content -->
+            </div><!-- /.contact-box -->
+          </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.contact-info -->
+
+    <!-- ========================
+      About Layout 2
+    =========================== -->
+    <section class="about-layout2 pb-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-7 offset-lg-1">
+            <div class="heading-layout2">
+              <h3 class="heading__title mb-60">Improving The Quality Of Your <br> Life Through Better Health.</h3>
+            </div><!-- /heading -->
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-5">
+            <div class="text-with-icon">
+              <div class="text__icon">
+                <i class="icon-doctor"></i>
+              </div>
+              <div class="text__content">
+                <p class="heading__desc font-weight-bold color-secondary mb-30">Our goal is to deliver quality of care
+                  in a courteous, respectful, and
+                  compassionate manner. We hope you will allow us to care for you and strive to be the first and best
+                  choice for healthcare.
+                </p>
+                <a href="appointment.html" class="btn btn__secondary btn__rounded mb-70" style="box-shadow: 0px 5px 83px 0px rgba(9, 29, 62, 0.15);">
+                  <span>Book Now</span> <i class="icon-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="video-banner-layout2 bg-overlay">
+              <!-- <img src="assets/images/about/smile.jpg" alt="about" class="w-100"> -->
+              <!-- <a class="video__btn video__btn-white popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
+                <div class="video__player">
+                  <i class="fa fa-play"></i>
+                </div>
+                <span class="video__btn-title color-white">Watch Our Video!</span>
+              </a> -->
+            </div><!-- /.video-banner -->
+          </div><!-- /.col-lg-6 -->
+          <div class="col-sm-12 col-md-12 col-lg-7">
+            <div class="about__text bg-white">
+              <p class="heading__desc mb-30 color-secondary">"Welcome to Cohort Healthcare,
+                Discover a world of holistic well-being and personalized healthcare services right here on our Cohort platform!
+                We're dedicated to enhancing your quality of life through a range of specialized offerings,
+
+                
+                
+              </p>
+              <p class="heading__desc mb-30 color-secondary">  
+                Your health is our priority, and we're here to help you smile confidently and live a healthier life. Discover the difference at our clinic today."</p>
+              <ul class="list-items list-unstyled">
+                <li>We conduct a range of tests to help us work out why you're not feeling well and determine the
+                  right
+                  treatment for you.</li>
+                <li>Our expert doctors, nurses and allied health professionals manage patients with a broad range of
+                  medical issues.
+                </li>
+                <li>We offer a wide range of care and support to our patients, from diagnosis to treatment and
+                  rehabilitation.
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.About Layout 2 -->
+
+    <!-- ========================
+        Services Layout 1
+    =========================== -->
+    <section class="services-layout1 services-carousel">
+      <div class="bg-img"><img src="assets/images/backgrounds/bg-2.jpg" alt="background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading text-center mb-60">
+              <h2 class="heading__subtitle color-white">The Best Dental And dental Health Care!</h2>
+              <h3 class="heading__title color-white">Being With You</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="slick-carousel"
+              data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "autoplay": true, "arrows": false, "dots": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+              <!-- service item #1 -->
+              <div class="service-item">
+                <div class="service__icon">
+                  <!-- <i class="icon-head"></i>
+                  <i class="icon-head"></i> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dental-broken" width="75" height="75" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 5.5c-1.074 -.586 -2.583 -1.5 -4 -1.5c-2.1 0 -4 1.247 -4 5c0 4.899 1.056 8.41 2.671 10.537c.573 .756 1.97 .521 2.567 -.236c.398 -.505 .819 -1.439 1.262 -2.801c.292 -.771 .892 -1.504 1.5 -1.5c.602 0 1.21 .737 1.5 1.5c.443 1.362 .864 2.295 1.262 2.8c.597 .759 2 .993 2.567 .237c1.615 -2.127 2.671 -5.637 2.671 -10.537c0 -3.74 -1.908 -5 -4 -5c-1.423 0 -2.92 .911 -4 1.5z"></path>
+                  <path d="M12 5.5l1 2.5l-2 2l2 2"></path>
+                  </svg>
+
+                </div><!-- /.service__icon -->
+                <div class="service__content">
+                  <h4 class="service__title">Dental Care</h4>
+                  <p class="service__desc">Achieve that radiant smile with our top-notch dental services and treatments. Your oral health is our priority.
+                     We prioritize your dental well-being by offering a wide range
+                  </p>
+                  <!-- <ul class="list-items list-items-layout1 list-unstyled">
+                    <li>Neurocritical Care</li>
+                    <li>Neuro Oncology</li>
+                    <li>Geriatric Neurology</li>
+                  </ul> -->
+                  <a href="services-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="service__icon">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-yoga" width="75" height="75" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                  <path d="M4 20h4l1.5 -3"></path>
+                  <path d="M17 20l-1 -5h-5l1 -7"></path>
+                  <path d="M4 10l4 -1l4 -1l4 1.5l4 1.5"></path>
+                </svg> -->
+                <img src="assets/images/icons//Group_104-removebg-preview.png" width="85px">
+                </div>
+                <div class="service__content">
+                  <h4 class="service__title">Yogayanam</h4>
+                  <p class="service__desc">Explore the world while prioritizing your well-being with our 
+                    exclusive travel group that combines adventure and wellness.
+                    Join our expert-led online and offline yoga and meditation sessions to rejuvenate
+
+                  </p>
+                  
+                  <a href="services-yoga.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <div class="service__icon">
+                  <!-- <i class="icon-microscope"></i>
+                  <i class="icon-microscope"></i> -->
+                  <img src="assets/images/icons/weight-scale (1).png" width="72px">
+                </div>
+                <div class="service__content">
+                  <h4 class="service__title">Ayur Fyt Weight Management</h4>
+                  <p class="service__desc">Embrace a healthier lifestyle with our Ayurveda-inspired weight management programs tailored just for you.
+                    Weight Management program is designed to help individuals achieve their
+                  </p>
+                  
+                  <a href="services-weight.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- <div class="service-item">
+                <div class="service__icon">
+                 <img src="assets/images/icons/mother-with-baby.svg" width="75px">
+                </div>
+                <div class="service__content">
+                  <h4 class="service__title">Maternity Care</h4>
+                  <p class="service__desc">Analyzing the radon or radon progeny concentrations with passive devices, or
+                    the
+                    act of calibrating radon or radon progeny measurement devices.
+                  </p>
+                 
+                  <a href="services-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+              </div> -->
+              
+              <div class="service-item">
+                <div class="service__icon">
+                  <i class="icon-heart2"></i>
+                 
+                </div>
+                <div class="service__content">
+                  <h4 class="service__title">Other Services</h4>
+                  <p class="service__desc">We provide compassionate and specialized care for our elderly patients, ensuring they lead a fulfilling and comfortable life.
+                  </p>
+                  
+                  <a href="services-other.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+              </div><!-- /.service-item -->
+             
+              <!-- <div class="service-item">
+                <div class="service__icon">
+                <i class="icon-heart3"></i>
+                  
+                </div>
+                <div class="service__content">
+                  <h4 class="service__title">Geriatric Care</h4>
+                  <p class="service__desc">For people requiring additional follow up, the Cardiac Clinic provides rapid
+                    access to professionals specialized in diagnosing and treating heart disease.
+                  </p>
+                  
+                  <a href="services-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+              </div> -->
+
+              <!-- <div class="service-item">
+                <div class="service__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zodiac-cancer" width="75" height="75" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M18 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M3 12a10 6.5 0 0 1 14 -6.5"></path>
+                    <path d="M21 12a10 6.5 0 0 1 -14 6.5"></path>
+                  </svg>
+
+                </div> -->
+
+            </div>
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Services Layout 1 -->
+
+    <!-- ========================
+        Notses
+    =========================== -->
+    
+
+    <!-- ======================
+    Features Layout 2
+    ========================= -->
+    <section class="features-layout2 bg-overlay bg-overlay-primary">
+      <div class="bg-img"><img src="assets/images/backgrounds/2.jpg" alt="background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-1">
+            <div class="heading__layout2 mb-50">
+              <h3 class="heading__title color-white">Cohort Dental & Health Care Excellence: 
+                Transforming Lives and Nurturing Wellness.</h3>
+            </div>
+          </div><!-- /col-lg-5 -->
+        </div><!-- /.row -->
+        <div class="row mb-50">
+          <div class="col-sm-3 col-md-3 col-lg-1 offset-lg-1">
+            <div class="heading__icon">
+              <i class="icon-insurance"></i>
+            </div>
+          </div><!-- /.col-lg-5 -->
+          <div class="col-sm-9 col-md-9 col-lg-6">
+            <p class="heading__desc font-weight-bold color-white mb-30">At the heart of our dental and health care practice lies a deep commitment to improving lives and serving the well-being of our community.
+              Discover a world of holistic well-being and personalized healthcare services With us! We're dedicated to enhancing your quality of life through a range of specialized offerings..
+
+            </p>
+            <a href="about-us.html#values" class="btn btn__white btn__link">
+              <i class="icon-arrow-right icon-filled"></i>
+              <span>Our Core Values</span>
+            </a>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+
+        
+        
+        <div class="row">
+          <div class="col-md-12 col-lg-6 offset-lg-3 text-center">
+            <p class="font-weight-bold color-gray mb-0">We hope you will allow us to care for you and strive to be the
+              first and best choice for healthcare.
+              <a href="contact-us.php">
+                <span>Contact Us For More Information</span> <i class="icon-arrow-right"></i>
+              </a>
+            </p>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Features Layout 2 -->
+
+    <!-- ======================
+      Team
+    ========================= -->
+
+    <!-- ======================
+     Work Process 
+    ========================= -->
+    <!-- <section class="work-process work-process-carousel pt-130 pb-0 bg-overlay bg-overlay-secondary">
+      <div class="bg-img"><img src="assets/images/banners/1.jpg" alt="background"></div>
+      <div class="container">
+      
+        <div class="row">
+          <div class="col-12">
+
+          <div class="heading text-center mb-40">
+              <h2 class="heading__subtitle" style="color:#627ac0">Recent Articles</h2>
+              <h3 class="heading__title" style="color:#fff">Our Blogs</h3>
+            </div>
+
+            <div class="carousel-container mt-90">
+              <div class="slick-carousel"
+                data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "infinite":false, "arrows": false, "dots": false, "responsive": [{"breakpoint": 1200, "settings": {"slidesToShow": 3}}, {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+                
+                <div class="process-item">
+                  <span class="process__number">01</span>
+                  <div class="process__icon">
+                    <i class="icon-health-report"></i>
+                  </div>
+                  <h4 class="process__title">Fill In Our Medical Application</h4>
+                  <p class="process__desc">Medcity offers low-cost health coverage for adults with limited income, you
+                    can
+                    enroll.</p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+
+                <div class="process-item">
+                  <span class="process__number">02</span>
+                  <div class="process__icon">
+                    <i class="icon-dna"></i>
+                  </div>
+                  <h4 class="process__title">Review Your Family Medical History</h4>
+                  <p class="process__desc">Regular health exams can help find all the problems, also can find it early
+                    chances.</p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span class="read-more">Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+
+                <div class="process-item">
+                  <span class="process__number">03</span>
+                  <div class="process__icon">
+                    <i class="icon-medicine"></i>
+                  </div>
+                  <h4 class="process__title">Choose Between Our Care Programs</h4>
+                  <p class="process__desc">We have protocols to protect our patients while continuing to provide
+                    necessary
+                    care.</p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+                
+                <div class="process-item">
+                  <span class="process__number">04</span>
+                  <div class="process__icon">
+                    <i class="icon-stethoscope"></i>
+                  </div>
+                  <h4 class="process__title">Introduce You To Highly Qualified Doctors</h4>
+                  <p class="process__desc">Our administration and support staff have exceptional skills and trained to
+                    assist you. </p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+                
+                <div class="process-item">
+                  <span class="process__number">05</span>
+                  <div class="process__icon">
+                    <i class="icon-head"></i>
+                  </div>
+                  <h4 class="process__title">Your custom Next process</h4>
+                  <p class="process__desc">Our administration and support staff have exceptional skills to assist you.
+                  </p>
+                  <a href="#" class="btn btn__secondary btn__link">
+                    <span>Read More</span>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta bg-light-blue">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-2 col-lg-2">
+              <img src="assets/images/icons/alert2.png" class="cta__img" alt="alert">
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-7">
+              <h4 class="cta__title">True Healthcare For Your Family!</h4>
+              <p class="cta__desc">Serve the community by improving the quality of life through better health. We have
+                put protocols to protect our patients and staff while continuing to provide medically necessary care.
+              </p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-3">
+              <a href="appointment.html" class="btn btn__primary btn__secondary-style2 btn__rounded">
+                <span>Healthcare Programs</span>
+                <i class="icon-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ========================= 
+      Testimonials layout 2
+      =========================  -->
+ 
+
+    <section class="testimonials-layout1 pt-110 pb-80">
+      <div class="container">
+        <div class="testimonials-wrapper">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-7 offset-lg-5">
+              <div class="heading-layout2">
+                <h3 class="heading__title">Inspiring Stories!</h3>
+              </div><!-- /.heading -->
+            </div><!-- /.col-lg-7 -->
+            <div class="col-sm-12 col-md-12 col-lg-5">
+              <div class="slider-nav mb-60">
+                <div class="testimonial__meta">
+                  <div class="testimonial__thmb">
+                    <img src="assets/images/testimonials/thumbs/1.png" alt="author thumb">
+                  </div><!-- /.testimonial-thumb -->
+                  <div>
+                    <h4 class="testimonial__meta-title">Sami Wade</h4>
+                    <p class="testimonial__meta-desc">Dental Patient</p>
+                  </div>
+                </div><!-- /.testimonial-meta -->
+                <div class="testimonial__meta">
+                  <div class="testimonial__thmb">
+                    <img src="assets/images/testimonials/thumbs/2.png" alt="author thumb">
+                  </div><!-- /.testimonial-thumb -->
+                  <div>
+                    <h4 class="testimonial__meta-title">Ahmed</h4>
+                    <p class="testimonial__meta-desc">Web Inc</p>
+                  </div>
+                </div><!-- /.testimonial-meta -->
+                <div class="testimonial__meta">
+                  <div class="testimonial__thmb">
+                    <img src="assets/images/testimonials/thumbs/3.png" alt="author thumb">
+                  </div><!-- /.testimonial-thumb -->
+                  <div>
+                    <h4 class="testimonial__meta-title">Sonia Blake</h4>
+                    <p class="testimonial__meta-desc">Patient</p>
+                  </div>
+                </div><!-- /.testimonial-meta -->
+              </div><!-- /.slider-nav -->
+            </div><!-- /.col-lg-5 -->
+            <div class="col-sm-12 col-md-12 col-lg-7">
+              <div class="slider-with-navs">
+                <!-- Testimonial #1 -->
+                <div class="testimonial-item">
+                  <h3 class="testimonial__title">“Their doctors include highly qualified practitioners who come from a
+                    range of backgrounds and bring with them a diversity of skills and special interests. They also have
+                    registered nurses on staff who are available to triage any urgent matters, and the administration
+                    and support staff all have exceptional people skills”
+                  </h3>
+                </div><!-- /. testimonial-item -->
+                <!-- Testimonial #2 -->
+                <div class="testimonial-item">
+                  <h3 class="testimonial__title">“ My experience with this dental clinic has been nothing short of amazing,the entire team are true professionals
+                    who go above and beyond to ensure their patients' comfort and well-being. 
+                    I came to Cohort Dental Clinic with a range of dental issues that had been plaguing me for years. 
+                    Not only did they address these problems with precision and expertise, but they also took the time to educate me about proper oral care and hygiene.”
+                  </h3>
+                </div><!-- /. testimonial-item -->
+                <!-- Testimonial #3 -->
+                <div class="testimonial-item">
+                  <h3 class="testimonial__title">“Thank you, Cohort Dental and Health Care, for your exceptional care and commitment to my health and happiness.”
+                  </h3>
+                </div><!-- /. testimonial-item -->
+              </div><!-- /.slick-carousel -->
+              <div class="testimonials__rating">
+                <div class="testimonials__rating-inner d-flex align-items-center">
+                  <span class="total__rate">4.9</span>
+                  <div><a href="testimonials.html">
+                    <span class="overall__rate">View More Testimonials</span>
+                    <!-- <span>, based on 7541 reviews.</span> -->
+                      </a>
+                  </div>
+                </div><!-- /.testimonials__rating-inner -->
+              </div><!-- /.testimonials__rating -->
+            </div><!-- /.col-lg-7 -->
+          </div><!-- /.row -->
+        </div><!-- /.testimonials-wrapper -->
+      </div><!-- /.container -->
+    </section><!-- /.testimonials layout 1 -->
+    <!-- ========================
+       gallery
+      =========================== -->
+
+    <!-- ==========================
+        contact layout 3
+    =========================== -->
+    <section class="contact-layout3 bg-light">
+      <div class="container">
+        <div class="row">       
+          <div class="col-sm-12 col-md-12 col-lg-12">
+                <h3 class="heading__title" style="text-align:center">Our Partners</h3>
+
+            <div class="slick-carousel mt-20"
+              data-slick='{"slidesToShow": 3, "arrows": false, "dots": false, "autoplay": true,"autoplaySpeed": 2000, "infinite": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 3}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 2}}]}'>
+              <div class="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+              </div><!-- /.client -->
+              <div class="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+              </div><!-- /.client -->
+              <div class="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+              </div><!-- /.client -->
+              <div class="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+              </div><!-- /.client -->
+              <div class="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+                <img src="assets/images/logo/logo-dark.png" alt="client">
+              </div><!-- /.client -->
+
+            </div><!-- /.carousel -->
+
+          </div><!-- /.col-lg-5 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.contact layout 3 -->
+
+
+
+    
+    <!-- ======================
+      Blog Grid
+    ========================= -->
+
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer class="footer">
+      <div class="footer-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="footer-widget-about">
+                <img src="assets/images/logo/logo-cohort.png" alt="logo" class="mb-2">
+                <p class="color-gray">Join us in the pursuit of a healthier,happier,and more balanced life.Stay connected for updates,tips, and expert advice on all your healthcare needs.
+                  Let's embark on a journey to optimal health and wellness together!
+                </p>
+                <a href="appointment.html" class="btn btn__primary btn__primary-style2 btn__link">
+                  <span>Make Appointment</span> <i class="icon-arrow-right"></i>
+                </a>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget__title">Departments</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Dental Clinic</a></li>
+                    <li><a href="#">Yogayanam</a></li>
+                    <li><a href="#">Weight Management</a></li>
+                    <li><a href="#">Other Services</a></li>
+
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget__title">Links</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="doctors-modern.html">Team Cohort</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="appointment.html">Appointments</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="footer-widget-contact">
+                <h6 class="footer-widget__title color-heading">Quick Contacts</h6>
+                <ul class="contact-list list-unstyled">
+                  <li>If you have any questions or need help, feel free to contact with our team.</li>
+                  <li>
+                    <a href="tel:8714563997" class="phone__number">
+                      <i class="icon-phone"></i> <span>87145 63997</span>
+                    </a>
+                  </li>
+                  <li class="color-body">1st floor, Lesly building, Balusseri Road, Karaparamba, Kozhikode.</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <a href="contact-us.html" class="btn btn__primary btn__link mr-30">
+                    <i class="icon-arrow-right"></i> <span>Get Directions</span>
+                  </a>
+                  <ul class="social-icons list-unstyled mb-0">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  </ul><!-- /.social-icons -->
+                </div>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-primary -->
+      <div class="footer-secondary">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <span class="fz-14">&copy; 2023 Cohort, All Rights Reserved.</span>
+              <a class="fz-14 color-primary" href="#"></a>
+            </div><!-- /.col-lg-6 -->
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <nav>
+                <ul class="list-unstyled footer__copyright-links d-flex flex-wrap justify-content-end mb-0">
+                  <li><a href="https://www.tapclone.in/">Crafted by Tapclone</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-secondary -->
+    </footer><!-- /.Footer -->
+
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+  </div><!-- /.wrapper -->
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

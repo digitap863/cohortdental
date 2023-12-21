@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Sidebar</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="css/main.css">
+
+<style>
+  
+:root {
+    --primary-color: #090E14;
+    --text: white;
+    --sidebar-gray: #111926;
+    --sidebar-gray-light: #D8DCE0;
+    --sidebar-gray-background: #373E4A;
+    --success: #00C896;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mulish;
+}
+ol,ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: var(--primary-color);
+    width: 20rem;
+    overflow-x: hidden;
+    padding: 1.8rem 0.85rem;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    transition: width 1.05s ease-in-out;
+    z-index: 100;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+body.collapsed nav {
+  width: 70px;
+}
+
+
+body.collapsed .hide {
+  opacity: 0;
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  transition: all 0.1s ease-in-out;
+}
+
+/*? sidebar top */
+
+.sidebar-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+body.collapsed .sidebar-top {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  justify-content: center;
+}
+
+.logo__wrapper {
+  padding-left: 4px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 54px;
+  height: 54px;
+}
+
+.expand-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.expand-btn svg {
+  stroke: white;
+  transform: rotate(180deg);
+  width: 42px;
+  height: 42px;
+}
+
+body.collapsed .expand-btn svg {
+  margin-top: 4px;
+  transform: rotate(360deg);
+  width: 48px;
+  height: 48px;
+}
+
+/*? menu links */
+
+.sidebar-links ul {
+  list-style-type: none;
+  position: relative;
+}
+
+.sidebar-links li {
+  position: relative;
+}
+
+.sidebar-links li a {
+  margin: 8px 6px;
+  /* padding: 12px; */
+  color: var(--sidebar-gray-light);
+  font-size: 1.005rem;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+/* .sidebar-links li a svg {
+  color: var(--sidebar-gray-light);
+  height: 32px;
+  width: 32px;
+} */
+
+.sidebar-links li a:hover svg {
+  stroke: var(--sidebar-gray-light);
+}
+
+.sidebar-links .link {
+  margin-left: 30px;
+  opacity: 1;
+}
+
+.sidebar-links li a:hover, .sidebar-links .active {
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--sidebar-gray-background);
+  transition: all 100ms ease-in;
+  border-radius: 10px;
+  color: var(--sidebar-gray-light);
+}
+
+.sidebar-links .active {
+  color: white;
+}
+
+.sidebar-links .active svg {
+  stroke: white;
+}
+
+/*? bottom sidebar */
+
+.sidebar-bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.divider {
+  width: 100%;
+  background-color: var(--sidebar-gray-light);
+  height: 1px;
+  display: block;
+}
+
+.sidebar-bottom ul {
+  margin: 6px 0px;
+}
+
+/*? account part */
+
+.sidebar__profile {
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+  gap: 20px;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+.avatar__wrapper {
+  position: relative;
+  display: flex;
+}
+
+.avatar {
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.avatar__name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.email {
+  font-size: 0.9rem;
+}
+
+.online__status {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--success);
+  bottom: 3px;
+  right: 3px;
+}
+
+
+</style>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <nav>
+            <div class="sidebar-top">
+              <div class="logo__wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" class="logo" width="180" height="180"  viewBox="0 0 180 180" fill="none">
+                  <path d="M82.646 37.0917C85.7401 35.3054 89.552 35.3054 92.646 37.0917L133.614 60.7445L105.286 77.3318C100.901 72.9296 94.8325 70.2051 88.128 70.2051C81.1554 70.2051 74.871 73.1519 70.4523 77.8681L41.4416 60.8811L82.646 37.0917Z" fill="white"/>
+                  <path d="M64.9303 87.4484L35.9141 70.4582V117.952L64.8222 101.025C64.2287 98.9258 63.9111 96.7109 63.9111 94.4219C63.9111 91.9977 64.2673 89.6567 64.9303 87.4484Z" fill="white"/>
+                  <path d="M70.1924 110.694L41.8975 127.262L82.646 150.788C85.74 152.574 89.552 152.574 92.646 150.788L133.158 127.398L105.556 111.236C101.152 115.8 94.9714 118.639 88.128 118.639C81.0175 118.639 74.6227 115.574 70.1924 110.694Z" fill="white"/>
+                  <path d="M111.22 101.739L139.376 118.226C139.377 118.162 139.378 118.098 139.378 118.034V70.1831L111.101 86.7403C111.908 89.154 112.345 91.7369 112.345 94.4219C112.345 96.9723 111.951 99.4305 111.22 101.739Z" fill="white"/>
+                </svg>
+                <h2 class="hide">Cohert</h2>
+              </div>
+              <div class="expand-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M7 7l5 5l-5 5"></path>
+                  <path d="M13 7l5 5l-5 5"></path>
+               </svg>      
+              </div>             
+            </div>
+            <div class="sidebar-links">
+                <ul>
+                  <li class="menu-item">
+                    <a href="index.html" title="Dashboard">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-smart-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#91959C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105" />
+                        <path d="M16 15c-2.21 1.333 -5.792 1.333 -8 0" />
+                      </svg>
+                      <span class="link hide">Home</span>
+                    </a>
+                  </li>
+                  
+                    <li class="menu-item has-submenu">
+                      <a href="#project" title="Project">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#91959C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"></path>
+                        </svg>
+                        <span class="link hide">Gallery</span>
+                      </a>
+                      <ul class="submenu">
+                        <li><a href="#">Add Gallery Item</a></li>
+                        <li><a href="#">Gallery List</a></li>
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+
+                  <!-- <li>
+                    <a href="#project" title="Project">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#91959C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"></path>
+                      </svg>
+                      <span class="link hide">Projects</span>
+                    </a>
+                  </li> -->
+
+                  <li class="has-submenu">
+                    <a href="#calendar" title="Calendar">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#91959C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                        <path d="M16 3l0 4"></path>
+                        <path d="M8 3l0 4"></path>
+                        <path d="M4 11l16 0"></path>
+                        <path d="M8 15h2v2h-2z"></path>
+                      </svg>
+                      <span class="link hide">Blogs</span>
+                    </a>
+                    <ul class="submenu">
+                      <li><a href="#">Add Blog Item</a></li>
+                      <li><a href="#">Blogs List</a></li>
+                      <!-- Add more submenu items as needed -->
+                    </ul>
+                  </li>
+
+
+                  
+                  <li class="has-submenu">
+                    <a href="#messages" title="Messages">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-quote" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#91959C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
+                        <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5" />
+                      </svg>
+                      <span class="link hide">Testimonials</span>
+                    </a>
+                    <ul class="submenu">
+                      <li><a href="#">Add Testimonials</a></li>
+                      <li><a href="#">Testimonials List</a></li>
+                      <!-- Add more submenu items as needed -->
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar-links sidebar-bottom">
+                <div class="divider"></div>
+                <ul>
+                  <li>
+                    <a href="#help" title="Help">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#91959C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                          <path d="M12 16v.01"></path>
+                          <path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483"></path>
+                      </svg>
+                      
+                      <span class="link hide">Help</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#settings" title="Settings">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#91959C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
+                        <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                      </svg>
+                      <span class="link hide">Settings</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="divider"></div>
+                <div class="sidebar__profile">
+                  <div class="avatar__wrapper">
+                    <img class="avatar" src="assets/joe-doe-profile.png" alt="Joe Doe Picture">
+                    <div class="online__status"></div>
+                  </div>
+                  <section class="avatar__name hide">
+                      <div class="user-name">Joe Doe</div>
+                      <div class="email">joe.doe@atheros.ai</div>
+                  </section>
+                </div>
+              </div>
+          </nav>
+
+          <div class="heading">
+            <h3 style="font-size:20px;margin-top:0;padding:18px">Add New Product</h3>
+          </div>  
+      
+      
+          <div class="col-md-9 form-container">
+            
+            <div class="content">
+            <form method="post" id="file-upload-form" action="upload/upload-product.php" enctype="multipart/form-data">
+      
+      
+            <div class="input-container">
+            <label>Product Category</label>
+            <select name="category" style="padding:10px;border-radius:6px" required>
+            <option value="" selected="selected" style="display: none;">Select An Item From List</option>
+              <option value="General Hardware">General Hardware</option>
+              <option value="Kitchen Accessories">Kitchen Accessories</option>
+              <option value="Bathroom Accessories">Bathroom Accessories</option>
+            </select>  
+            </div>
+      
+            <div class="input-container">
+            <input type="text" name="prod_name" class="input" required>
+            <label class="label">Product Name</label>
+            </div>
+      
+            <button class="save-btn" type="submit" name="submit">
+            <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+                  <svg class="icon" height="30" width="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z">
+                  </path>
+                  </svg>
+            </div>
+            </div>
+            <span>Save/Upload</span>
+            </button>
+            </form>
+           
+            </div>
+          </div>
+      
+  <script src="main.js"></script>        
+  <script>
+            
+const expand_btn = document.querySelector(".expand-btn");
+
+let activeIndex;
+
+expand_btn.addEventListener("click", () => {
+  const iconImage = expand_btn.querySelector('img');
+
+  document.body.classList.toggle("collapsed");
+});
+
+const current = window.location.href;
+
+const allLinks = document.querySelectorAll(".sidebar-links a")
+
+allLinks.forEach((elem) => {
+  elem.addEventListener('click', function() {
+    const hrefLinkClick = elem.href;    
+
+    allLinks.forEach((link) => {
+      if (link.href == hrefLinkClick){
+        link.classList.add("active");
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  })
+});
+
+  </script>
+
+  <script>
+// JavaScript
+  document.addEventListener("DOMContentLoaded", function () {
+    const hasSubmenuItems = document.querySelectorAll(".has-submenu");
+
+    hasSubmenuItems.forEach((item) => {
+      const submenu = item.querySelector(".submenu");
+
+      // Initially hide submenu
+      submenu.style.display = "none";
+
+      item.addEventListener("click", function () {
+        // Toggle the class to show/hide submenu
+        this.classList.toggle("active");
+
+        // Toggle the display of the submenu
+        if (submenu.style.display === "none") {
+          submenu.style.display = "block";
+        } else {
+          submenu.style.display = "none";
+        }
+      });
+    });
+  });
+
+  </script>
+ <script>
+  // JavaScript code to toggle the sidebar
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
