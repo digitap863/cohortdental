@@ -1571,7 +1571,7 @@ h6 {
   padding: 0;
 }
 .btn__link.btn__primary {
-  color: #21cdc0;
+  color: #F4C84F;
 }
 .btn__link.btn__primary-style2:hover {
   color: #ffffff !important;
@@ -2013,7 +2013,7 @@ input[type=radio] {
   transition: all 0.4s linear;
 }
 .social-icons li a:hover {
-  background-color: #21cdc0;
+  background-color: #F4C84F;
 }
 .social-icons li:last-of-type {
   margin-right: 0;
@@ -2327,7 +2327,7 @@ input[type=radio] {
   transform: translateY(-50%);
 }
 .slick-arrow:hover {
-  color: #21cdc0;
+  color: #F4C84F;
 }
 .slick-arrow.slick-next:before, .slick-arrow.slick-prev:before {
   font-family: "icomoon";
@@ -6687,7 +6687,7 @@ textarea.form-control {
   height: 50px;
 }
 .service-item .btn:hover {
-  border-color: #21cdc0;
+  border-color: #F4C84F;
   /* background-color: #21cdc0; */
 }
 .service-item:hover {
@@ -6695,7 +6695,7 @@ textarea.form-control {
   box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.12);
 }
 .service-item:hover:before {
-  background-color: #21cdc0;
+  background-color: #F4C84F;
 }
 
 .services-layout1 .service-item {
